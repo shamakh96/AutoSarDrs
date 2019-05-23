@@ -1,12 +1,8 @@
  /******************************************************************************
  *
- * Module: Common - Platform
+ * Std_Types.h
  *
- * File Name: Std_Types.h
- *
- * Description: General type definitions
- *
- * Author: Mohamed Tarek
+ * Author: r
  *
  *******************************************************************************/
 
@@ -16,41 +12,11 @@
 #include "Platform_Types.h"
 #include "Compiler.h"
 
-/* Id for the company in the AUTOSAR
- * for example Mohamed Tarek's ID = 1000 :) */
-#define STD_TYPES_VENDOR_ID                                  (1000U)
-
-/*
- * Module Version 1.0.0
- */
-#define STD_TYPES_SW_MAJOR_VERSION                           (1U)
-#define STD_TYPES_SW_MINOR_VERSION                           (0U)
-#define STD_TYPES_SW_PATCH_VERSION                           (0U)
-
-/*
- * AUTOSAR Version 4.0.3
- */
-#define STD_TYPES_AR_RELEASE_MAJOR_VERSION                   (4U)
-#define STD_TYPES_AR_RELEASE_MINOR_VERSION                   (0U)
-#define STD_TYPES_AR_RELEASE_PATCH_VERSION                   (3U)
-
 /*
  *  Describes the standard Return Type Definitions used in the project
  */
 typedef uint8  Std_ReturnType;
 
-/*
- * Structure for the Version of the module.
- * This is requested by calling <Module name>_GetVersionInfo()
- */
-typedef struct
-{
-  uint16  vendorID;
-  uint16  moduleID;
-  uint8 sw_major_version;
-  uint8 sw_minor_version;
-  uint8 sw_patch_version;
-} Std_VersionInfoType;
 
 #define STD_HIGH        0x01U       /* Standard HIGH */
 #define STD_LOW         0x00U       /* Standard LOW */

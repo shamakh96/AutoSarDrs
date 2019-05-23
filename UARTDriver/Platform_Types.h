@@ -1,35 +1,17 @@
  /******************************************************************************
  *
- * Module: Common - Platform Abstraction
  *
- * File Name: Platform_Types.h
+ * Platform_Types.h
  *
- * Description: Platform types for AVR
  *
- * Author: Mohamed Tarek
+ *
+ * Author: r
  *
  *******************************************************************************/
 
 #ifndef PLATFORM_TYPES_H
 #define PLATFORM_TYPES_H
 
-/* Id for the company in the AUTOSAR
- * for example Mohamed Tarek's ID = 1000 :) */
-#define PLATFORM_VENDOR_ID                          (1000U)
-
-/*
- * Module Version 1.0.0
- */
-#define PLATFORM_SW_MAJOR_VERSION                   (1U)
-#define PLATFORM_SW_MINOR_VERSION                   (0U)
-#define PLATFORM_SW_PATCH_VERSION                   (0U)
-
-/*
- * AUTOSAR Version 4.0.3
- */
-#define PLATFORM_AR_RELEASE_MAJOR_VERSION           (4U)
-#define PLATFORM_AR_RELEASE_MINOR_VERSION           (0U)
-#define PLATFORM_AR_RELEASE_PATCH_VERSION           (3U)
 
 /*
  * CPU register type width
