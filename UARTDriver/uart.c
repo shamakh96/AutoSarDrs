@@ -8,9 +8,9 @@
 
 #include "uart.h"
 
-static void (* volatile RxInterPtr)(void) ;
-static void (* volatile TxInterPtr)(void) ;
-static void (* volatile REInterPtr)(void) ;
+static void (* volatile RxInterPtr)(void) = NULL_PTR ;
+static void (* volatile TxInterPtr)(void) = NULL_PTR ;
+static void (* volatile REInterPtr)(void) = NULL_PTR ;
 
 static UART_configType g_configs ;
 
@@ -89,19 +89,21 @@ void set_REPtrF ( void (*rePtr)(void) )
 ISR (USART_RXC_vect)
 {
 
-	RxInterPtr();
+	if (RxInterPtr != NULL_PTR)
+		RxInterPtr();
 
 
 }
 ISR (USART_TXC_vect)
 {
-
-	TxInterPtr ();
+	if (TxInterPtr != NULL_PTR)
+		TxInterPtr ();
 
 }
 ISR (USART_UDRE_vect)
 {
 
+	if (REInterPtr != NULL_PTR)
 	REInterPtr();
 
 }
